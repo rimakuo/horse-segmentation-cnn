@@ -18,11 +18,12 @@ Segment horse images from the background to produce masks for downstream tasks s
 
 ## 📁 Repository Structure
 horse-segmentation-cnn/
-├─ notebooks/ # Demo notebook
-├─ data/ # Sample images + instructions for full dataset
-├─ models/ # Saved model weights
-├─ train.py # Training script
-├─ eval.py # Evaluation script
+├─ horse_segmentation_demo.ipynb
+├─ data/sample_images/...
+├─ data/sample_masks/...
+├─ best_model.pth
+├─ train.py
+├─ eval.py
 └─ README.md
 
 ## 🔧 Technologies
