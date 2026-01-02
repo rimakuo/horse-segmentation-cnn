@@ -18,12 +18,17 @@ Segment horse images from the background to produce masks for downstream tasks s
 
 ## 📁 Repository Structure
 horse-segmentation-cnn/
-├─ notebooks/ # Demo notebook
-├─ data/ # Sample images + instructions for full dataset
-├─ models/ # Saved model weights
-├─ train.py # Training script
-├─ eval.py # Evaluation script
-└─ README.md
+├─ notebooks/
+│   └─ horse_segmentation_demo.ipynb  # Demo notebook: sample images + predictions + loss/IOU curves
+├─ data/
+│   ├─ sample_images/                  # 5~10 sample horse images
+│   ├─ sample_masks/                   # Corresponding masks
+│   └─ README.md                       # Instructions to download full dataset
+├─ models/
+│   └─ best_model.pth                  # Optional: small trained model or instructions
+├─ train.py                             # Training script (CNN)
+├─ eval.py                              # Evaluation script + prediction visualization
+└─ README.md                            # Project description
 
 ## 🔧 Technologies
 Python, PyTorch, NumPy, OpenCV, Matplotlib, Jupyter Notebook
