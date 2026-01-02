@@ -18,12 +18,17 @@ The goal is to segment horse images from the background, producing accurate mask
 
 ## 📁 Repository Structure
 horse-segmentation-cnn/
-├─ notebooks/ # Jupyter notebooks with experiments
-├─ data/ # Dataset (or instructions to download)
-├─ models/ # Saved models
-├─ train.py # Training script
-├─ eval.py # Evaluation script
-└─ README.md
+├─ notebooks/
+│   └─ horse_segmentation_demo.ipynb 
+├─ data/
+│   └─ sample_images/                
+│   └─ sample_masks/                
+│   └─ README.md                      
+├─ models/
+│   └─ best_model.pth                 
+├─ train.py                           
+├─ eval.py                             
+└─ README.md                           
 
 
 ## 🔧 Technologies
