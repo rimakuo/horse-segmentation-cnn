@@ -3,39 +3,32 @@
 This project is an individual ML project for image segmentation of horses using a convolutional neural network (CNN) in PyTorch.
 
 ## 📝 Problem
-The goal is to segment horse images from the background, producing accurate masks for downstream tasks like object detection and analysis.
+Segment horse images from the background to produce masks for downstream tasks such as object detection or analysis.
 
 ## 🛠 Approach
-- Built an encoder–decoder CNN in PyTorch
-- Used transposed convolution layers for upsampling
-- Preprocessed and split a custom horse image dataset
-- Trained the model to maximize Intersection-over-Union (IoU)
+- Encoder–decoder CNN using Conv2d, MaxPool2d, ConvTranspose2d layers
+- Trained on 328 horse images resized to 32×32
+- Binary mask segmentation (0 = background, 1 = horse)
+- Used Intersection-over-Union (IoU) as evaluation metric
+- Achieved **70%+ IOU** on test set
 
 ## 📊 Results
-- Achieved **70%+ IoU** on the test set
-- Visualized predictions with sample images in the `notebooks/` folder
-- Documented model architecture, training process, and evaluation metrics in Jupyter Notebook
+- Sample predictions are in `notebooks/horse_segmentation_demo.ipynb`
+- Model weights saved as `models/best_model.pth`
 
 ## 📁 Repository Structure
 horse-segmentation-cnn/
-├─ notebooks/
-│   └─ horse_segmentation_demo.ipynb 
-├─ data/
-│   └─ sample_images/                
-│   └─ sample_masks/                
-│   └─ README.md                      
-├─ models/
-│   └─ best_model.pth                 
-├─ train.py                           
-├─ eval.py                             
-└─ README.md                           
-
+├─ notebooks/ # Demo notebook
+├─ data/ # Sample images + instructions for full dataset
+├─ models/ # Saved model weights
+├─ train.py # Training script
+├─ eval.py # Evaluation script
+└─ README.md
 
 ## 🔧 Technologies
-- Python, PyTorch, NumPy
-- Jupyter Notebook, Matplotlib
+Python, PyTorch, NumPy, OpenCV, Matplotlib, Jupyter Notebook
 
 ## ⚡ Next Steps
-- Experiment with U-Net and attention-based models
-- Explore data augmentation to improve accuracy
-- Extend to multi-class segmentation tasks
+- Try U-Net or attention-based architectures
+- Use data augmentation to improve performance
+- Extend to multi-class segmentation
